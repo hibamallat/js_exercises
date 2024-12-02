@@ -7,12 +7,11 @@
   </head>
   <body>
     <input type="number" id="num" placeholder="Enter a number" />
-    <p id="answer"></p>
     <button type="button" onclick="divisible_by_3and5()">Click</button>
     <script>
       function divisible_by_3and5() {
         const number = document.getElementById("num").value;
-        document.write("The numbers divisible by both 3 and 5 are: ")
+        document.write("The numbers divisible by both 3 and 5 are: ");
         for (i = 15; i <= number; i++) {
           if ((i % 3 == 0) & (i % 5 == 0)) {
             document.write(i + " ");
