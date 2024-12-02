@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-     
-</body>
+  </head>
+  <body>
+    <input id="fib" type="number" placeholder="Enter a number" />
+    <button type="button" onclick="fibonacci_sequence()">
+      Get the sequence
+    </button>
+    <script>
+      function fibonacci_sequence() {
+        const user_num = document.getElementById("fib").value;
+        const base1 = 0;
+        const base2 = 1;
+        let copy_base1 = base1;
+        let copy_base2 = base2;
+        if (user_num == 0) {
+          document.write("The sequence is: " + base1);
+        } else {
+          document.write("The sequence is: " + base1 + ", " + base2);
+        }
+
+        for (i = 0; i < user_num - 2; i++) {
+          sum = copy_base1 + copy_base2;
+          copy_base1 = copy_base2;
+          copy_base2 = sum;
+          document.write(", " + sum);
+        }
+      }
+    </script>
+  </body>
 </html>
