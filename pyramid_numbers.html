@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input type="number" id="num">
-    <button type="button" onclick="pyramid_numbers()">click</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+  </head>
+  <body>
+    <input type="number" id="num" placeholder="Enter a number" />
+    <br />
+    <br />
+    <button type="button" onclick="pyramid_numbers()">Generate Pyramid</button>
     <script>
-        function pyramid_numbers(){
-            user_num = document.getElementById("num").value;
-            for(let i = 1; i <= user_num; i++){
-                for(let j = 1; j <= i; j++){
-                    document.write(j + "\n ");
-                }
-            }
+      function pyramid_numbers() {
+        user_num = document.getElementById("num").value;
+        for (let i = 1; i <= user_num; i++) {
+          for (let j = 1; j <= i; j++) {
+            document.write(j + " ");
+          }
+          document.write("<br>");
         }
-
+      }
     </script>
-</body>
+  </body>
 </html>
