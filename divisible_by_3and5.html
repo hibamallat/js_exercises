@@ -12,7 +12,8 @@
       function divisible_by_3and5() {
         const number = document.getElementById("num").value;
         document.write("The numbers divisible by both 3 and 5 are: ");
-        for (i = 15; i <= number; i++) {
+
+        for (let i = 0; i <= number; i++) {
           if ((i % 3 == 0) & (i % 5 == 0)) {
             document.write(i + " ");
           }

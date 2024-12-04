@@ -13,12 +13,11 @@
       function calculate_odd() {
         const user_num = document.getElementById("num").value;
         let sum = 0;
-        for (i = 0; i <= user_num; i++) {
+        for (let i = 0; i <= user_num; i++) {
           if (i % 2 != 0) {
             sum += i;
           }
         }
-
         document.getElementById("answer").innerHTML =
           "sum of odd numbers: " + sum;
       }
