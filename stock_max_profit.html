@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function max_profit(prices) {
+        let max_profit = 0;
+        let min_price = prices[0];
+        for (let i = 0; i < prices.length; i++) {
+          if (min_price > prices[i]) {
+            min_price = prices[i];
+          }
+          profit = prices[i] - min_price;
+          if (profit > max_profit) {
+            max_profit = profit;
+          }
+        }
+        return max_profit;
+      }
+      const array = [5, 7, 2, 9, 1, 3];
+      console.log("The maximum possible profit:", max_profit(array));
+    </script>
+  </body>
+</html>
