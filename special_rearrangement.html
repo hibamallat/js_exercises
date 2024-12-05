@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function special_rearrangement(numbers) {
+        let odds = [];
+        let evens = [];
+        for (let i = 0; i < numbers.length; i++) {
+          if (numbers[i] % 2 != 0) {
+            odds.push(numbers[i]);
+          } else {
+            evens.push(numbers[i]);
+          }
+        }
+        // Combine evens and odds
+        return evens.concat(odds);
+      }
+
+      const array = [2, 3, 4, 5, 6, 7];
+      // Call the function with the test array and log the result
+      console.log("Rearranged Array:", specialRearrangement(array));
+    </script>
+  </body>
+</html>
